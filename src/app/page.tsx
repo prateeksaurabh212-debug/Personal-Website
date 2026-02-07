@@ -8,6 +8,7 @@ import { Hero } from "@/components/Hero";
 import { ExperienceSection } from "@/components/ExperienceSection";
 import { AIProjectsSection } from "@/components/AIProjectsSection";
 import { SkillsSection } from "@/components/SkillsSection";
+import { GradioChatSection } from "@/components/GradioChatSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 
@@ -42,6 +43,14 @@ export default function Home() {
           transition={{ duration: 0.6 }}
         >
           <SkillsSection />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <GradioChatSection />
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}

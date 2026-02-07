@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -28,6 +29,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} min-h-screen antialiased`}
       >
+        <Script
+          src="https://gradio.s3-us-west-2.amazonaws.com/4.44.1/gradio.js"
+          strategy="afterInteractive"
+          type="module"
+        />
         {children}
       </body>
     </html>
