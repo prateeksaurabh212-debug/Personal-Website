@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion";
 
-const GRADIO_SPACE_URL = "https://huggingface.co/spaces/Prateek212/career-conversations-manual";
+// Hugging Face Space embed URL (required for iframe/gradio-app), not the hub page URL
+const HF_SPACE_EMBED_URL = "https://prateek212-career-conversations-manual.hf.space";
 
 export function GradioChatSection() {
   return (
@@ -24,11 +25,12 @@ export function GradioChatSection() {
         transition={{ duration: 0.5 }}
       >
         <div className="glass-gradient-border overflow-hidden rounded-2xl">
-          {/* @ts-expect-error gradio-app is a custom element from Gradio JS */}
-          <gradio-app
-            src={GRADIO_SPACE_URL}
-            className="block w-full min-h-[500px]"
-            style={{ minHeight: "500px" }}
+          <iframe
+            src={HF_SPACE_EMBED_URL}
+            title="Career Conversations Chat"
+            className="block w-full min-h-[550px] border-0"
+            allow="accelerometer; ambient-light-sensor; autoplay; battery; camera; display-capture; encrypted-media; fullscreen; geolocation; gyroscope; layout-animations; legacy-image-formats; magnetometer; microphone; midi; payment; picture-in-picture; publickey-credentials-get; sync-xhr; usb; vr; web-share; xr-spatial-tracking"
+            sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-downloads"
           />
         </div>
       </motion.div>
