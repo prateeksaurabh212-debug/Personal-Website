@@ -29,6 +29,8 @@ export function GradioChatSection() {
           style={{
             borderRadius: "15px",
             boxShadow: "0 0 30px -8px rgba(59, 130, 246, 0.25), 0 0 50px -12px rgba(168, 85, 247, 0.15)",
+            backdropFilter: "blur(20px)",
+            WebkitBackdropFilter: "blur(20px)",
           }}
         >
           <iframe
