@@ -15,7 +15,7 @@ export function GradioChatSection() {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <span className="gradient-text">Career Chat</span>
+        <span className="gradient-text">Virtual me: Ask me anything about my career</span>
       </motion.h2>
       <motion.div
         className="mx-auto max-w-5xl"
@@ -24,11 +24,17 @@ export function GradioChatSection() {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <div className="glass-gradient-border overflow-hidden rounded-2xl">
+        <div
+          className="overflow-hidden bg-[var(--glass-bg)]"
+          style={{
+            borderRadius: "15px",
+            boxShadow: "0 0 30px -8px rgba(59, 130, 246, 0.25), 0 0 50px -12px rgba(168, 85, 247, 0.15)",
+          }}
+        >
           <iframe
             src={HF_SPACE_EMBED_URL}
             title="Career Conversations Chat"
-            className="block w-full min-h-[550px] border-0"
+            className="block w-full min-h-[550px] border-0 outline-none"
             allow="accelerometer; ambient-light-sensor; autoplay; battery; camera; display-capture; encrypted-media; fullscreen; geolocation; gyroscope; layout-animations; legacy-image-formats; magnetometer; microphone; midi; payment; picture-in-picture; publickey-credentials-get; sync-xhr; usb; vr; web-share; xr-spatial-tracking"
             sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-downloads"
           />
