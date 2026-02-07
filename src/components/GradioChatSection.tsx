@@ -3,7 +3,9 @@
 import { motion } from "framer-motion";
 
 // Hugging Face Space embed URL (required for iframe/gradio-app), not the hub page URL
-const HF_SPACE_EMBED_URL = "https://prateek212-career-conversations-manual.hf.space";
+// __theme=dark forces Gradio to render in dark mode to match the site
+const HF_SPACE_EMBED_URL =
+  "https://prateek212-career-conversations-manual.hf.space?__theme=dark";
 
 export function GradioChatSection() {
   return (
@@ -25,7 +27,7 @@ export function GradioChatSection() {
         transition={{ duration: 0.5 }}
       >
         <div
-          className="overflow-hidden bg-[var(--glass-bg)]"
+          className="overflow-hidden border border-[var(--glass-border)] bg-[var(--glass-bg)]"
           style={{
             borderRadius: "15px",
             boxShadow: "0 0 30px -8px rgba(59, 130, 246, 0.25), 0 0 50px -12px rgba(168, 85, 247, 0.15)",
